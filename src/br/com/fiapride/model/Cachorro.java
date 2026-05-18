@@ -7,6 +7,16 @@ public class Cachorro {
     private int peso;
     private int tamanho;
     private int energia;
+    private String nome;
+    
+    public Cachorro(String nome, String cor, int peso, int tamanho, int energia) {
+
+        this.setNome(nome);
+        this.setCor(cor);
+        this.setPeso(peso);
+        this.setTamanho(tamanho);
+        this.setEnergia(energia);
+    }
 
     // GETTERS E SETTERS
 
@@ -25,10 +35,8 @@ public class Cachorro {
     // REGRA DE NEGÓCIO
     // O peso não pode ser menor ou igual a zero
     public void setPeso(int peso) {
-
         if (peso > 0) {
             this.peso = peso;
-
         } else {
             System.out.println("Erro: peso inválido.");
         }
@@ -37,7 +45,6 @@ public class Cachorro {
     public int getTamanho() {
         return tamanho;
     }
-
     public void setTamanho(int tamanho) {
         this.tamanho = tamanho;
     }
@@ -45,9 +52,23 @@ public class Cachorro {
     public int getEnergia() {
         return energia;
     }
-
     public void setEnergia(int energia) {
         this.energia = energia;
+    }
+    
+    public String getNome() {
+        return nome;
+    }
+    public void setNome(String nome) {
+
+        if (nome != null && !nome.isEmpty()) {
+
+            this.nome = nome;
+
+        } else {
+
+            System.out.println("Erro: nome inválido.");
+        }
     }
 
     // MÉTODO 1
