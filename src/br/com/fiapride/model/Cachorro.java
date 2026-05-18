@@ -8,16 +8,18 @@ public class Cachorro {
     private int tamanho;
     private int energia;
     private String nome;
+    private Dono dono;
     
-    public Cachorro(String nome, String cor, int peso, int tamanho, int energia) {
+    public Cachorro(String nome, String cor, int peso, int tamanho, int energia, Dono dono) {
 
         this.setNome(nome);
         this.setCor(cor);
         this.setPeso(peso);
         this.setTamanho(tamanho);
         this.setEnergia(energia);
+        this.setDono(dono);
     }
-
+    
     // GETTERS E SETTERS
 
     public String getCor() {
@@ -60,15 +62,19 @@ public class Cachorro {
         return nome;
     }
     public void setNome(String nome) {
-
         if (nome != null && !nome.isEmpty()) {
-
             this.nome = nome;
-
         } else {
-
             System.out.println("Erro: nome inválido.");
         }
+    }
+    
+    public Dono getDono() {
+        return dono;
+    }
+
+    public void setDono(Dono dono) {
+        this.dono = dono;
     }
 
     // MÉTODO 1

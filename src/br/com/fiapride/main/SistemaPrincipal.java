@@ -1,27 +1,35 @@
 package br.com.fiapride.main;
 
 import br.com.fiapride.model.Cachorro;
+import br.com.fiapride.model.Dono;
 
 public class SistemaPrincipal {
 
     public static void main(String[] args) {
 
         // INSTANCIAÇÃO
+    	
+    	Dono dono1 = new Dono("Fernando", 19);
+
     	Cachorro cachorro1 = new Cachorro(
-    		    "Apolo",
-    		    "Cinza",
-    		    20,
-    		    55,
-    		    10
-    		);
+    	    "Apolo",
+    	    "Cinza",
+    	    20,
+    	    55,
+    	    10,
+    	    dono1
+    	);
+
+    	Dono dono2 = new Dono("Rodolfo", 30);
 
     	Cachorro cachorro2 = new Cachorro(
-    		    "Boris",
-    		    "Marrom",
-    		    35,
-    		    55,
-    		    10
-    		);
+    	    "Boris",
+    	    "Cinza",
+    	    20,
+    	    55,
+    	    10,
+    	    dono2
+    	);
 
         // EXIBIÇÃO INICIAL
         System.out.println("--- Sistema FiapRide ---");
@@ -33,6 +41,7 @@ public class SistemaPrincipal {
         System.out.println("Peso: " + cachorro1.getPeso() + "kg");
         System.out.println("Tamanho inicial: " + cachorro1.getTamanho() + "cm");
         System.out.println("Energia inicial: " + cachorro1.getEnergia());
+        System.out.println("Nome do dono: " + cachorro1.getDono().getNome());
 
         System.out.println();
 
@@ -41,6 +50,7 @@ public class SistemaPrincipal {
         System.out.println("Peso: " + cachorro2.getPeso() + "kg");
         System.out.println("Tamanho inicial: " + cachorro2.getTamanho() + "cm");
         System.out.println("Energia inicial: " + cachorro2.getEnergia());
+        System.out.println("Nome do dono: " + cachorro2.getDono().getNome());
 
         System.out.println();
 
@@ -60,6 +70,7 @@ public class SistemaPrincipal {
         System.out.println("Peso: " + cachorro1.getPeso() + "kg");
         System.out.println("Tamanho atualizado: " + cachorro1.getTamanho() + "cm");
         System.out.println("Energia atualizada: " + cachorro1.getEnergia());
+        System.out.println("Nome do dono: " + cachorro1.getDono().getNome());
 
         System.out.println();
 
@@ -68,6 +79,7 @@ public class SistemaPrincipal {
         System.out.println("Peso: " + cachorro2.getPeso() + "kg");
         System.out.println("Tamanho atualizado: " + cachorro2.getTamanho() + "cm");
         System.out.println("Energia atualizada: " + cachorro2.getEnergia());
+        System.out.println("Nome do dono: " + cachorro2.getDono().getNome());
 
         System.out.println();
 
@@ -90,6 +102,7 @@ public class SistemaPrincipal {
         System.out.println("Peso: " + cachorro1.getPeso() + "kg");
         System.out.println("Tamanho final: " + cachorro1.getTamanho() + "cm");
         System.out.println("Energia final: " + cachorro1.getEnergia());
+        System.out.println("Nome do dono: " + cachorro1.getDono().getNome());
 
         System.out.println();
 
@@ -98,5 +111,6 @@ public class SistemaPrincipal {
         System.out.println("Peso: " + cachorro2.getPeso() + "kg");
         System.out.println("Tamanho final: " + cachorro2.getTamanho() + "cm");
         System.out.println("Energia final: " + cachorro2.getEnergia());
+        System.out.println("Nome do dono: " + cachorro2.getDono().getNome());
     }
 }
