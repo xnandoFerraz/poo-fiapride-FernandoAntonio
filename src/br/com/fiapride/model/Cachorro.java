@@ -1,6 +1,6 @@
 package br.com.fiapride.model;
 
-public class Cachorro {
+public abstract class Cachorro {
 
     private String nome;
     private String cor;
@@ -82,9 +82,7 @@ public class Cachorro {
         this.dono = dono;
     }
     
-    public String fazerSom() {
-
-        return "O cachorro está fazendo um som.";
+    public abstract String fazerSom(); {
     }
 
     // Método 1
