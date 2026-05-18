@@ -1,6 +1,6 @@
 package br.com.fiapride.model;
 
-public class CachorroPastorAlemao extends Cachorro {
+public class CachorroPastorAlemao extends Cachorro implements Treinavel {
 
     private String militar;
 
@@ -31,5 +31,19 @@ public class CachorroPastorAlemao extends Cachorro {
 	public String fazerSom() {
 	
 	    return "AU AU! O Pastor Alemão está protegendo a área.";
+	}
+	
+	@Override
+	public void treinar() {
+
+	    System.out.println(
+	        getNome() + " está treinando patrulha militar."
+	    );
+	}
+
+	@Override
+	public String executarComando() {
+
+	    return "O Pastor Alemão obedeceu imediatamente!";
 	}
 }

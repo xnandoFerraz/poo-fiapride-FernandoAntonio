@@ -1,5 +1,6 @@
 package br.com.fiapride.main;
 
+import br.com.fiapride.model.Treinavel;
 import java.util.ArrayList;
 import java.util.List;
 import br.com.fiapride.model.Cachorro;
@@ -16,26 +17,26 @@ public class SistemaPrincipal {
         Dono dono1 = new Dono("Fernando", 19);
 
         CachorroPastorAlemao cachorro1 = new CachorroPastorAlemao(
-            "Apolo",
-            "Cinza",
-            20,
-            55,
-            10,
-            dono1,
-            "Patrulha"
-        );
+        	    "Boris",
+        	    "Preto",
+        	    30,
+        	    65,
+        	    15,
+        	    dono1,
+        	    "Patrulha"
+        	);
 
         Dono dono2 = new Dono("Rodolfo", 30);
 
         CachorroHusky cachorro2 = new CachorroHusky(
-            "Boris",
-            "Branco",
-            20,
-            55,
-            10,
-            dono2,
-            true
-        );
+        	    "Apolo",
+        	    "Cinza",
+        	    20,
+        	    55,
+        	    10,
+        	    dono2,
+        	    true
+        	);
         
         List<Cachorro> listaCachorros = new ArrayList<>();
 
@@ -57,6 +58,8 @@ public class SistemaPrincipal {
         // Atributo exclusivo
         System.out.println("Missão militar: " + cachorro1.getMissao());
 
+
+
         System.out.println();
 
         System.out.println("-- Cachorro 2 (" + cachorro2.getNome() + ") --");
@@ -69,6 +72,7 @@ public class SistemaPrincipal {
         // Atributo exclusivo
         System.out.println("Gosta de neve: " + cachorro2.isGostaDeNeve());
 
+
         System.out.println();
 
         System.out.println("--- Polimorfismo ---");
@@ -78,6 +82,27 @@ public class SistemaPrincipal {
             System.out.println(
                 cachorro.getNome() + ": " + cachorro.fazerSom()
             );
+        }
+        System.out.println();
+
+        System.out.println();
+
+        System.out.println("--- Teste Interface ---");
+
+        Treinavel[] treinaveis = {
+            cachorro1,
+            cachorro2
+        };
+
+        for (Treinavel cachorro : treinaveis) {
+
+            cachorro.treinar();
+
+            System.out.println(
+                cachorro.executarComando()
+            );
+
+            System.out.println();
         }
         
         System.out.println();
@@ -113,6 +138,7 @@ public class SistemaPrincipal {
 
         System.out.println();
 
+        
         System.out.println("--- Polimorfismo ---");
 
         for (Cachorro cachorro : listaCachorros) {

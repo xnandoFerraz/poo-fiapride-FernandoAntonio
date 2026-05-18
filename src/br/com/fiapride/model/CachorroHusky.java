@@ -1,6 +1,6 @@
 package br.com.fiapride.model;
 
-public class CachorroHusky extends Cachorro {
+public class CachorroHusky extends Cachorro implements Treinavel {
 
     private boolean gostaDeNeve;
 
@@ -30,5 +30,18 @@ public class CachorroHusky extends Cachorro {
 	public String fazerSom() {
 	
 	    return "Auuuuuu! O Husky está uivando na neve.";
+	}
+	@Override
+	public void treinar() {
+
+	    System.out.println(
+	        getNome() + " está treinando corrida na neve."
+	    );
+	}
+
+	@Override
+	public String executarComando() {
+
+	    return "O Husky ignorou o comando e saiu correndo.";
 	}
 }
