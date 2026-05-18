@@ -78,9 +78,13 @@ public class Cachorro {
     public Dono getDono() {
         return dono;
     }
-
     public void setDono(Dono dono) {
         this.dono = dono;
+    }
+    
+    public String fazerSom() {
+
+        return "O cachorro está fazendo um som.";
     }
 
     // Método 1

@@ -22,8 +22,13 @@ public class CachorroHusky extends Cachorro {
     public boolean isGostaDeNeve() {
         return gostaDeNeve;
     }
-
     public void setgostaDeNeve(boolean gostaDeNeve) {
         this.gostaDeNeve = gostaDeNeve;
     }
+
+	@Override
+	public String fazerSom() {
+	
+	    return "Auuuuuu! O Husky está uivando na neve.";
+	}
 }

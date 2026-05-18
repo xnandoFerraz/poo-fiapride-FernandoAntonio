@@ -1,5 +1,7 @@
 package br.com.fiapride.main;
 
+import java.util.ArrayList;
+import java.util.List;
 import br.com.fiapride.model.Cachorro;
 import br.com.fiapride.model.CachorroHusky;
 import br.com.fiapride.model.CachorroPastorAlemao;
@@ -34,6 +36,11 @@ public class SistemaPrincipal {
             dono2,
             true
         );
+        
+        List<Cachorro> listaCachorros = new ArrayList<>();
+
+        listaCachorros.add(cachorro1);
+        listaCachorros.add(cachorro2);
 
         // Tela inicial
         System.out.println("--- Sistema FiapRide ---");
@@ -62,6 +69,17 @@ public class SistemaPrincipal {
         // Atributo exclusivo
         System.out.println("Gosta de neve: " + cachorro2.isGostaDeNeve());
 
+        System.out.println();
+
+        System.out.println("--- Polimorfismo ---");
+
+        for (Cachorro cachorro : listaCachorros) {
+
+            System.out.println(
+                cachorro.getNome() + ": " + cachorro.fazerSom()
+            );
+        }
+        
         System.out.println();
 
         // Teste com valores válidos
@@ -95,6 +113,17 @@ public class SistemaPrincipal {
 
         System.out.println();
 
+        System.out.println("--- Polimorfismo ---");
+
+        for (Cachorro cachorro : listaCachorros) {
+
+            System.out.println(
+                cachorro.getNome() + ": " + cachorro.fazerSom()
+            );
+        }
+        
+        System.out.println();
+
         // Teste com valores inválidos
         System.out.println("-- Testes inválidos --");
 
@@ -126,5 +155,19 @@ public class SistemaPrincipal {
         System.out.println("Energia final: " + cachorro2.getEnergia());
         System.out.println("Nome do dono: " + cachorro2.getDono().getNome());
         System.out.println("Gosta de neve: " + cachorro2.isGostaDeNeve());
+        
+        System.out.println();
+
+        System.out.println("--- Polimorfismo ---");
+
+        for (Cachorro cachorro : listaCachorros) {
+
+            System.out.println(
+                cachorro.getNome() + ": " + cachorro.fazerSom()
+            );
+        }
+        
+        System.out.println();
+
     }
 }

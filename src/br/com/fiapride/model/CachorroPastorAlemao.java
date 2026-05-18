@@ -26,4 +26,10 @@ public class CachorroPastorAlemao extends Cachorro {
     public void setMissao(String militar) {
         this.militar = militar;
     }
+
+	@Override
+	public String fazerSom() {
+	
+	    return "AU AU! O Pastor Alemão está protegendo a área.";
+	}
 }
