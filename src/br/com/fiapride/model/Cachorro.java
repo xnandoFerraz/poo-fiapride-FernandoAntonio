@@ -2,16 +2,22 @@ package br.com.fiapride.model;
 
 public class Cachorro {
 
-    // ATRIBUTOS
+    private String nome;
     private String cor;
     private int peso;
     private int tamanho;
     private int energia;
-    private String nome;
     private Dono dono;
-    
-    public Cachorro(String nome, String cor, int peso, int tamanho, int energia, Dono dono) {
 
+    // Construtor
+    public Cachorro(
+            String nome,
+            String cor,
+            int peso,
+            int tamanho,
+            int energia,
+            Dono dono
+    ) {
         this.setNome(nome);
         this.setCor(cor);
         this.setPeso(peso);
@@ -19,8 +25,8 @@ public class Cachorro {
         this.setEnergia(energia);
         this.setDono(dono);
     }
-    
-    // GETTERS E SETTERS
+
+    // Getters e Setters
 
     public String getCor() {
         return cor;
@@ -34,7 +40,7 @@ public class Cachorro {
         return peso;
     }
 
-    // REGRA DE NEGÓCIO
+    // Regra de negócio
     // O peso não pode ser menor ou igual a zero
     public void setPeso(int peso) {
         if (peso > 0) {
@@ -77,7 +83,7 @@ public class Cachorro {
         this.dono = dono;
     }
 
-    // MÉTODO 1
+    // Método 1
     public void crescer(int cm) {
 
         if (cm > 0) {
@@ -91,7 +97,7 @@ public class Cachorro {
         }
     }
 
-    // MÉTODO 2
+    // Método 2
     public void brincar(int tempo) {
 
         if (tempo > 0 && energia >= tempo) {
